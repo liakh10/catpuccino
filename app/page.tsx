@@ -17,6 +17,7 @@ const NAV = [
   { href: "#play", label: "Play" },
   { href: "#cats", label: "The Cats" },
   { href: "#menu", label: "Menu" },
+  { href: "/docs", label: "Docs" },
 ];
 
 const HOW = [
@@ -215,7 +216,7 @@ export default function Home() {
         <footer className="footer">
           <div className="footer-top reveal">
             <a href="#top" className="brand"><CupLogo size={24} /> <b>Catpuccino Café</b></a>
-            <div className="footer-links"><a href="#play">Play</a><a href="#cats">Cats</a><a href="#menu">Menu</a><a href={X_URL} target="_blank" rel="noreferrer" className="footer-x"><XIcon size={15} /> X</a></div>
+            <div className="footer-links"><a href="#play">Play</a><a href="#cats">Cats</a><a href="#menu">Menu</a><a href="/docs">Docs</a><a href={X_URL} target="_blank" rel="noreferrer" className="footer-x"><XIcon size={15} /> X</a></div>
           </div>
           <div className="footer-buy reveal"><CABlock /><BuyLinks small /></div>
           <p className="footer-bottom">© {new Date().getFullYear()} {TICKER} · brewed with love for cats</p>
