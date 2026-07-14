@@ -2,10 +2,11 @@
 
 import { useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import { CA, TICKER, X_URL, PUMP_URL, DEX_URL, isRealCA } from "./config";
 import { CATS, catById } from "./cafe/data";
 import { Cat } from "./art/cats";
-import { CupLogo, XIcon, Bean, Paw, Drink } from "./art/icons";
+import { XIcon, Bean, Paw, Drink } from "./art/icons";
 import { getSfx } from "./sfx";
 import { getMusic } from "./music";
 import { getBeans, setBeans, getUnlocked, addUnlocked } from "./store";
@@ -160,7 +161,7 @@ export default function Home() {
 
       <main>
         <header className="nav">
-          <a href="#top" className="brand"><CupLogo size={26} /> <b>Catpuccino</b> <span className="brand-ticker">{TICKER}</span></a>
+          <a href="#top" className="brand"><Image src="/x-avatar.png" alt="" width={28} height={28} style={{ borderRadius: "50%", objectFit: "cover" }} /> <b>Catpuccino</b> <span className="brand-ticker">{TICKER}</span></a>
           <nav className="nav-links">{NAV.map((n) => <a key={n.href} href={n.href}>{n.label}</a>)}</nav>
           <div className="nav-actions">
             <button className="icon-btn" onClick={toggleMute} title="sound">{muted ? "off" : "on"}</button>
@@ -215,7 +216,7 @@ export default function Home() {
         {/* FOOTER */}
         <footer className="footer">
           <div className="footer-top reveal">
-            <a href="#top" className="brand"><CupLogo size={24} /> <b>Catpuccino Café</b></a>
+            <a href="#top" className="brand"><Image src="/x-avatar.png" alt="" width={24} height={24} style={{ borderRadius: "50%", objectFit: "cover" }} /> <b>Catpuccino Café</b></a>
             <div className="footer-links"><a href="#play">Play</a><a href="#cats">Cats</a><a href="#menu">Menu</a><a href="/docs">Docs</a><a href={X_URL} target="_blank" rel="noreferrer" className="footer-x"><XIcon size={15} /> X</a></div>
           </div>
           <div className="footer-buy reveal"><CABlock /><BuyLinks small /></div>
